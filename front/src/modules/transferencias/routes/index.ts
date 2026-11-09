@@ -24,7 +24,10 @@ function queryValueToString(value: unknown) {
   return value ? String(value) : ""
 }
 
+import TransferReceiptCrudRoute from "./TransferReceiptCrudRoute"
+
 export const routes = [
+...TransferReceiptCrudRoute,
 ...BankMovementCrudRoute,
 ...PayerCrudRoute,
 ...TransferEmailProcessRoute,

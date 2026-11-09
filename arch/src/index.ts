@@ -22,6 +22,7 @@ import InternalTransferBonusSchema from './schemas/traspasosInternos/InternalTra
 import BankMovementSchema from './schemas/transferencias/BankMovementSchema';
 import PayerEntitySchema from './schemas/transferencias/PayerEntitySchema';
 import TransferEmailSchema from './schemas/transferencias/TransferEmailSchema';
+import TransferReceiptSchema from './schemas/transferencias/TransferReceiptSchema';
 const schemas = [
     //add schemas
 
@@ -60,7 +61,8 @@ const schemas = [
     //Transferencias
     BankMovementSchema,
     PayerEntitySchema,
-    TransferEmailSchema
+    TransferEmailSchema,
+    TransferReceiptSchema
 ];
 
 const generator = new ArchGenerator(schemas);

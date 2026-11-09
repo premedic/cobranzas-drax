@@ -41,6 +41,8 @@ import { AffiliateTypePermissions } from "../modules/premedic/permissions/Affili
 import { BonusPermissions } from "../modules/bajas/permissions/BonusPermissions.js";
 import { InternalTransferBonusPermissions } from "../modules/traspasosInternos/permissions/InternalTransferBonusPermissions.js";
 
+import {TransferReceiptPermissions} from "../modules/transferencias/permissions/TransferReceiptPermissions.js";
+
 function InitializePermissions() {
 
     //Merge All Permissions
@@ -83,6 +85,7 @@ function InitializePermissions() {
         ...Object.values(BankMovementPermissions),
         ...Object.values(PayerPermissions),
         ...Object.values(TransferEmailPermissions),
+        ...Object.values(TransferReceiptPermissions),
         ...Object.values(TransferAuditSessionPermissions),
         ...Object.values(BonusPermissions),
         ...Object.values(InternalTransferBonusPermissions),

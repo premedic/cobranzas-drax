@@ -22,6 +22,8 @@ async function BankMovementFastifyRoutes(fastify, options) {
 
     fastify.post('/api/bank-movements', {schema: schemas.createSchema}, (req,rep) =>controller.create(req,rep))
 
+    fastify.post('/api/bank-movements/import-file', (req,rep) => controller.importFile(req,rep))
+
     fastify.put('/api/bank-movements/:id', {schema: schemas.updateSchema}, (req,rep) =>controller.update(req,rep))
     
     fastify.patch('/api/bank-movements/:id', {schema: schemas.updateSchema}, (req,rep) =>controller.updatePartial(req,rep))

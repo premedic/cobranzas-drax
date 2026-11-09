@@ -5,6 +5,16 @@ const messages = {
       entity: 'Bank Movement',
       menu: 'Bank Movements',
       crud: 'Manage Bank Movements',
+      import: {
+        menu: 'Import bank movements',
+        title: 'Import bank movements',
+        description: 'Select the bank and upload the movements file downloaded from online banking.',
+        bank: 'Bank',
+        file: 'Movements file',
+        submit: 'Import movements',
+        success: '{count} bank movements were imported.',
+        error: 'Bank movements could not be imported.'
+      },
       field: {
         Fecha: 'Bank Date',
         Concepto: 'Concept',
@@ -39,6 +49,16 @@ const messages = {
       entity: 'Movimiento bancario',
       menu: 'Movimientos bancarios',
       crud: 'Gestionar movimientos bancarios',
+      import: {
+        menu: 'Importar movimientos bancarios',
+        title: 'Importar movimientos bancarios',
+        description: 'Seleccioná el banco y subí el archivo de movimientos descargado desde el home banking.',
+        bank: 'Banco',
+        file: 'Archivo de movimientos',
+        submit: 'Importar movimientos',
+        success: 'Se importaron {count} movimientos bancarios.',
+        error: 'No se pudieron importar los movimientos bancarios.'
+      },
       field: {
         Fecha: 'Fecha banco',
         Concepto: 'Concepto',

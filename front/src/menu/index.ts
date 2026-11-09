@@ -158,11 +158,25 @@ const menu: MenuItem[] = [
         permission: 'bankmovement:manage'
       },
       {
+        icon: 'mdi-bank-plus',
+        text: 'bankmovement.import.menu',
+        link: { name: "BankMovementImport" },
+        gallery: true,
+        permission: 'bankmovement:manage'
+      },
+      {
         icon: 'mdi-account-search',
         text: 'payer.menu',
         link: { name: "PayerCrudPage" },
         gallery: true,
         permission: 'payer:manage'
+      },
+      {
+        icon: 'mdi-receipt-text-outline',
+        text: 'transferreceipt.menu',
+        link: { name: 'TransferReceiptCrudPage' },
+        gallery: true,
+        permission: 'transferreceipt:manage'
       },
       {
         icon: 'mdi-email-fast-outline',

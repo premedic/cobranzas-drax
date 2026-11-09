@@ -6,6 +6,8 @@
   "private": true,
   "scripts": {
     "back": "nodemon --exec node --env-file .env --loader ts-node/esm src/index.ts",
+    "back-jobs": "nodemon --exec node --env-file .env --loader ts-node/esm src/index-jobs.ts",
+    "prod-jobs": "node --env-file .env index-jobs.js",
     "back-mail": "nodemon --exec node --env-file .env --loader ts-node/esm src/index-mail.ts",
     "prod": "node --env-file .env  index.js",
     "build": "tsc -p tsconfig.json && copyfiles package.json ../out",
@@ -49,7 +51,8 @@
     "zod": "^4.3.6",
     "exceljs": "^4.4.0",
     "imapflow": "^1.2.18",
-    "pdfjs-dist": "^5.6.205"
+    "pdfjs-dist": "^5.6.205",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.2",

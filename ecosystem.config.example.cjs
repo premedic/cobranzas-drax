@@ -22,6 +22,10 @@ const env = {
 	DRAX_FILE_DIR: 'uploads',
 	DRAX_FILE_METADATA: 'true',
 
+	// Portal de comprobantes (URL base, sin /api)
+	TRANSFER_RECEIPT_PORTAL_URL: '',
+	TRANSFER_RECEIPT_PORTAL_API_KEY: '',
+
 	// IA
 	AI_PROVIDER: 'GoogleAi',
 	OPENAI_API_KEY: '',
@@ -58,8 +62,8 @@ module.exports = {
 			env,
 		},
 		{
-			name: 'COBRANZAS-DRAX MAIL',
-			script: './out/index-mail.js',
+			name: 'COBRANZAS-DRAX JOBS',
+			script: './out/index-jobs.js',
 			instances: 1,
 			env,
 		},
