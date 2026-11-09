@@ -32,6 +32,7 @@ import { OutboundEmailFastifyRoutes } from "../modules/mail/routes/OutboundEmail
 import { TemplateEmailFastifyRoutes } from "../modules/mail/routes/TemplateEmailRoutes.js";
 import { BankMovementFastifyRoutes } from "../modules/transferencias/routes/BankMovementRoutes.js";
 import { PayerFastifyRoutes } from "../modules/transferencias/routes/PayerRoutes.js";
+import { TransferReceiptFastifyRoutes } from "../modules/transferencias/routes/TransferReceiptRoutes.js";
 import { TransferEmailFastifyRoutes } from "../modules/transferencias/routes/TransferEmailRoutes.js";
 import { TransferAuditSessionFastifyRoutes } from "../modules/transferencias/routes/TransferAuditSessionRoutes.js";
 import { AffiliateFastifyRoutes } from "../modules/premedic/routes/AffiliateRoutes.js";
@@ -89,6 +90,7 @@ function FastifyServerFactory(rootDir) {
     server.fastifyRegister(BankMovementFastifyRoutes);
     server.fastifyRegister(PayerFastifyRoutes);
     server.fastifyRegister(TransferEmailFastifyRoutes);
+    server.fastifyRegister(TransferReceiptFastifyRoutes);
     server.fastifyRegister(TransferAuditSessionFastifyRoutes);
     server.fastifyRegister(BonusFastifyRoutes);
     server.fastifyRegister(InternalTransferBonusFastifyRoutes);

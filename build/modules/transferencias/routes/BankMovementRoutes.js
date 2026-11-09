@@ -11,6 +11,7 @@ async function BankMovementFastifyRoutes(fastify, options) {
     fastify.get('/api/bank-movements/find-one', { schema: schemas.findOneSchema }, (req, rep) => controller.findOne(req, rep));
     fastify.get('/api/bank-movements/group-by', { schema: schemas.groupBySchema }, (req, rep) => controller.groupBy(req, rep));
     fastify.post('/api/bank-movements', { schema: schemas.createSchema }, (req, rep) => controller.create(req, rep));
+    fastify.post('/api/bank-movements/import-file', (req, rep) => controller.importFile(req, rep));
     fastify.put('/api/bank-movements/:id', { schema: schemas.updateSchema }, (req, rep) => controller.update(req, rep));
     fastify.patch('/api/bank-movements/:id', { schema: schemas.updateSchema }, (req, rep) => controller.updatePartial(req, rep));
     fastify.delete('/api/bank-movements/:id', { schema: schemas.deleteSchema }, (req, rep) => controller.delete(req, rep));

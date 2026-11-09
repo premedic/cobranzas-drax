@@ -19,6 +19,14 @@ const BankMovementBaseSchema = z.object({
     afiliadoId: z.coerce.string().optional().nullable(),
     estado: z.enum(['pendiente', 'asignado', 'manual', 'ignorado']).optional().default('pendiente')
 });
+const BankMovementImportSchema = z.object({
+    bank: z.literal('credicoop'),
+    file: z.object({
+        filepath: z.string().min(1),
+        filename: z.string().optional(),
+        mimetype: z.string().optional()
+    })
+});
 const BankMovementSchema = BankMovementBaseSchema
     .extend({
     _id: z.coerce.string(),
@@ -26,4 +34,4 @@ const BankMovementSchema = BankMovementBaseSchema
     afiliadoId: z.object({ _id: z.coerce.string(), nombre: z.string() }).nullable().optional()
 });
 export default BankMovementSchema;
-export { BankMovementSchema, BankMovementBaseSchema };
+export { BankMovementSchema, BankMovementBaseSchema, BankMovementImportSchema };
